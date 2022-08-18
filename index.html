@@ -26,6 +26,10 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- aos link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>Frontend Mentor | Fylo landing page with two column layout</title>
   </head>
   <body class="ff-primary">
@@ -79,7 +83,7 @@
     <img src="./images/bg-curve-mobile.svg" class="bg-curve-mobile" />
     <img src="./images/bg-curve-desktop.svg" class="bg-curve-desktop" />
     <section class="grid description bg-grayish-blue">
-      <div class="description-info flow-top margin-l">
+      <div class="description-info flow-top margin-l" data-aos="fade-up">
         <h1 class="ff-secondary fs-600 text-dark-blue">
           Stay productive, wherever you are
         </h1>
@@ -103,7 +107,7 @@
             /></span>
           </a>
         </div>
-        <div class="testimonial-div">
+        <div class="testimonial-div" data-aos="flip-right">
           <article class="testimonial grid gap">
             <img src="./images/icon-quotes.svg" alt="quotes" width="20" />
             <p
@@ -160,7 +164,7 @@
       </aside>
     </section>
     <!-- footer section  -->
-    <footer class="bg-dark-blue text-grayish-blue fs-200">
+    <footer class="bg-dark-blue text-grayish-blue fs-200" data-aos="fade-left">
       <div>
         <img
           src="./images/footer-logo.svg"
@@ -205,5 +209,11 @@
         </div>
       </section>
     </footer>
+    <script>
+      AOS.init({
+        offset: 150,
+        duration: 500,
+      })
+    </script>
   </body>
 </html>
