@@ -253,8 +253,12 @@ select {
 /* ------------------ */
 /* Custom css components */
 /* ------------------ */
-
 /* navbar  */
+html {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 nav {
   grid-auto-flow: column;
   justify-content: space-between;
@@ -283,15 +287,17 @@ menu > span:focus {
 .join-email {
   outline: none;
   border: 1px solid var(--desaturated-blue);
-  border-radius: 0.2rem;
-  resize: none;
+  border-radius: 0.3rem;
+  min-height: 45px;
+  width: max(100%, 200px);
+  padding: 0.3rem 1rem;
 }
 .join-email::placeholder {
   color: var(--gray);
 }
 .get-started-button {
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .get-started-button:hover,
@@ -301,7 +307,8 @@ menu > span:focus {
 }
 
 /* description section  */
-.bg-curve-mobile {
+.bg-curve-mobile img,
+.bg-curve-desktop img {
   width: 100%;
 }
 .description {
@@ -351,9 +358,11 @@ menu > span:focus {
   max-width: min(80%, 400px);
   margin: 0 auto;
 }
-.access-signup > textarea {
+.access-signup > input {
+  min-height: 45px;
+  width: max(100%, 200px);
   outline: none;
-  resize: none;
+  border: none;
   border-radius: 0.2rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -370,6 +379,7 @@ menu > span:focus {
 /* footer  */
 footer {
   padding: 2.5rem;
+  overflow-y: hidden;
 }
 .footer-logo {
   margin-top: 1.5rem;
@@ -398,12 +408,11 @@ footer {
 /* for smaller devices  */
 @media (max-width: 1000px) {
   .get-started {
-    max-width: min(70%, 500px);
-    display: grid;
     margin: 0 auto;
     gap: 1rem;
     grid-template-rows: 1fr 1fr;
   }
+
   .bg-curve-desktop {
     display: none;
   }

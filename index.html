@@ -28,7 +28,6 @@
 
     <!-- aos link  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <title>Frontend Mentor | Fylo landing page with two column layout</title>
   </head>
@@ -58,10 +57,11 @@
         </p>
 
         <div class="grid get-started">
-          <textarea
+          <input
+            type="text"
             class="join-email"
-            placeholder="    Enter your email..."
-          ></textarea>
+            placeholder=" Enter your email..."
+          />
           <button
             class="get-started-button bg-bright-blue fs-500 text-grayish-blue"
           >
@@ -80,8 +80,13 @@
     </section>
 
     <!-- description section  -->
-    <img src="./images/bg-curve-mobile.svg" class="bg-curve-mobile" />
-    <img src="./images/bg-curve-desktop.svg" class="bg-curve-desktop" />
+    <div class="bg-curve-mobile">
+      <img src="./images/bg-curve-mobile.svg" />
+    </div>
+    <div class="bg-curve-desktop">
+      <img src="./images/bg-curve-desktop.svg" />
+    </div>
+
     <section class="grid description bg-grayish-blue">
       <div class="description-info flow-top margin-l" data-aos="fade-up">
         <h1 class="ff-secondary fs-600 text-dark-blue">
@@ -107,7 +112,7 @@
             /></span>
           </a>
         </div>
-        <div class="testimonial-div" data-aos="flip-right">
+        <div class="testimonial-div" data-aos="flip-left">
           <article class="testimonial grid gap">
             <img src="./images/icon-quotes.svg" alt="quotes" width="20" />
             <p
@@ -156,7 +161,7 @@
       </div>
       <aside>
         <div class="access-signup grid gap" style="--gap: 0.7rem">
-          <textarea placeholder="      email@example.come"></textarea>
+          <input placeholder="      email@example.come" />
           <button class="text-grayish-blue fs-300 bg-bright-blue">
             Get Started For Free
           </button>
@@ -164,8 +169,8 @@
       </aside>
     </section>
     <!-- footer section  -->
-    <footer class="bg-dark-blue text-grayish-blue fs-200" data-aos="fade-left">
-      <div>
+    <footer class="bg-dark-blue text-grayish-blue fs-200">
+      <div data-aos="fade-up">
         <img
           src="./images/footer-logo.svg"
           alt="logo"
@@ -174,7 +179,7 @@
         />
       </div>
       <section class="footer-section">
-        <div class="logo-section">
+        <div class="logo-section" data-aos="fade-up">
           <div
             class="flex gap margin-b-sm"
             style="--gap: 1.3rem; --margin-b-sm: 0.8rem"
@@ -191,28 +196,29 @@
           </div>
         </div>
 
-        <div class="about-us grid gap margin-b-m">
+        <div class="about-us grid gap margin-b-m" data-aos="fade-up">
           <p>About Us</p>
           <p>Jobs</p>
           <p>Press</p>
           <p>Blog</p>
         </div>
-        <div class="contact-us grid gap margin-b-m">
+        <div class="contact-us grid gap margin-b-m" data-aos="fade-up">
           <p>Contact Us</p>
           <p>Terms</p>
           <p>Privacy</p>
         </div>
-        <div class="contact-icons gap" style="--gap: 1.3rem">
+        <div class="contact-icons gap" style="--gap: 1.3rem" data-aos="fade-up">
           <i class="fa-brands fa-facebook"></i>
           <i class="fa-brands fa-twitter"></i>
           <i class="fa-brands fa-instagram"></i>
         </div>
       </section>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
         offset: 150,
-        duration: 500,
+        duration: 800,
       })
     </script>
   </body>
